@@ -10,6 +10,14 @@ public class Utilidad {
 		System.out.flush();
 		System.out.println();
 	}
+	
+	public void limpiarPantallaMenor() {
+		for (int i = 0; i < 5; i++) {
+			System.out.println();
+		}
+		System.out.flush();
+		System.out.println();
+	}
 
 	public void esperar() {
 		try {

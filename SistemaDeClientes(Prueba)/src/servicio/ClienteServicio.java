@@ -12,7 +12,20 @@ public class ClienteServicio {
 	Cliente cliente = new Cliente();
     ArrayList<Cliente> lista = Menu.listaClientes;
 
+    public ClienteServicio() {
+    	super();
+    }
 	
+	public ArrayList<Cliente> getLista() {
+		return lista;
+	}
+
+
+	public void setLista(ArrayList<Cliente> lista) {
+		this.lista = lista;
+	}
+
+
 	public void editarCliente(String rut, String opcion) {
 		switch (opcion) {
 		case "1":
@@ -52,29 +65,26 @@ public class ClienteServicio {
 					String opcionEditar = scanner.nextLine();
 					switch (opcionEditar) {
 					case "1":
-						System.out.println("1.-Ingrese el nuevo RUN del Cliente:");
+						System.out.printf("1.-Ingrese el nuevo RUN del Cliente:");
 						String datoPorCambiar = scanner.nextLine();
 						cliente.setRunCliente(datoPorCambiar);
 						break;
 					case "2":
-						System.out.println("2.-Ingrese el nuevo Nombre del Cliente:");
+						System.out.printf("2.-Ingrese el nuevo Nombre del Cliente:");
 						datoPorCambiar = scanner.nextLine();
 						cliente.setNombreCliente(datoPorCambiar);
 						break;
 					case "3":
-						System.out.println("3.-Ingrese el nuevo Apellido del Cliente:");
+						System.out.printf("3.-Ingrese el nuevo Apellido del Cliente:");
 						datoPorCambiar = scanner.nextLine();
 						cliente.setApellidoCliente(datoPorCambiar);
 						;
 						break;
 					case "4":
-						System.out.println("4.-Ingrese los nuevos años como Cliente:");
+						System.out.printf("4.-Ingrese los nuevos años como Cliente:");
 						datoPorCambiar = scanner.nextLine();
 						cliente.setAniosCliente(datoPorCambiar);
 						;
-						break;
-					default:
-						System.out.println("Opción no válida");
 						break;
 					}
 				} else {
